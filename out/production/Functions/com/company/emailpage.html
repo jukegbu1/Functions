@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<SCRIPT TYPE="text/javascript"> function popup(mylink, windowname) {
+    if (!window.focus) return true;
+    var href;
+    if (typeof (mylink) == 'string') href = mylink; else href = mylink.href;
+    window.open(href, windowname, 'width=400,height=200,scrollbars=yes');
+    return false;
+} </SCRIPT>
+
+<MAP NAME="popupImgMap">
+    <AREA SHAPE=RECT HREF="mypopup.html" ALT="My Popup" COORDS="10,10,120,120" onClick="return popup(this, 'gloss')">
+    <AREA SHAPE=RECT HREF="yourpopup.html" ALT="Your Popup" COORDS="140,10,180,50"
+          onClick="return popup(this, 'gloss')">
+    <AREA SHAPE=DEFAULT NOHREF>
+</MAP>
+<IMG SRC="mymap.gif" HEIGHT=130 WIDTH=190 ALT="Image Map Example" BORDER="0" USEMAP="#popupImgMap">
+
+Read more: https://html.com/javascript/popup-windows/#ixzz5jP4eo6yD
+<A HREF="/code-samples/basicpopup/" onClick="return popup(this, 'notes')">TIME SHEET REQUEST REJECTED</A>
+
+
+</body>
+</html>
